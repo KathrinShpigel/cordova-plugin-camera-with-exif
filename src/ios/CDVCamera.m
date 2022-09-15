@@ -679,6 +679,8 @@ static NSString* toBase64(NSData* data) {
     __weak CDVCameraPicker* cameraPicker = (CDVCameraPicker*)picker;
     __weak CDVCamera* weakSelf = self;
     
+    self.latestMediaInfo = info;
+    
     dispatch_block_t invoke = ^(void) {
         __block CDVPluginResult* result = nil;
         
